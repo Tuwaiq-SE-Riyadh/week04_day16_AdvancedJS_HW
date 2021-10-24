@@ -34,9 +34,12 @@ fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699")
 
       const nnn = async() => {
           const res = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699");
-          const json = await res.json();
-          console.log(json.items);
+          const json1 = await res.json();
+          return "Title Name: " + json1.items[0].volumeInfo.title +"\n And the description is: " +json1.items[0].volumeInfo.description
       }
+      nnn().then(json1 =>{
+          console.log(json1);
+      })
 
 
       function testTimeOut(){
