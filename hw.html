@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .message{
+                position: fixed;
+    top: 150px;
+    left: 50%;
+    background: #c0f1b7;
+    color: #095719;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 100;
+    font-size: 28px;
+    transition: all 0.4s;
+    transform:translateX(-50%) scale(0);
+}
+            
+        </style>
+    </head>
+<body>
+    <h1 >Press the buttons below to see how setTimeout is used. Wait to see how the text below changes after a timeout of 3 seconds.</h1>
+<div>
+    <div id ="test"></div>
+        <input type="button" id="bttn1" onclick="testTimeout()" Value= "test timeout" />
+        <h1 id=head ></h1>
+        <input type="button" id="bttn2" value="clear timeout"  onclick=" clTimeout()" />
+    </div>
+    <br>
+    <h3 id="timeout_text"></h3>
+  
+<script src="hw.js">
+    // setTimeout(testTimeout, 3000)
+
+
+</script>
+</body>
+</html>
