@@ -42,15 +42,12 @@
  })
 function myFunction() {
     document.getElementById("timeout_text").innerHTML="The timeout has been started";
+    let stop=setTimeout(() => {
+        let h3=document.getElementById("timeout_text")
+        h3.innerText="The timeout has been started";
+        h3.style.color="green"
+    }, 3000);
+    
 }
 
-
-  let stop=setTimeout(() => {
-    let h3=document.querySelector("#timeout_text1")
-    let p=document.createElement("p")
-    p.innerText="The timeout has been started";
-    p.style.color="green"
-    h3.appendChild(p)
-
-}, 3000);
-
+  
