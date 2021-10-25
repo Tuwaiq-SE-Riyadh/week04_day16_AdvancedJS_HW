@@ -12,12 +12,14 @@
       }*/
 
 const request = async() => {
+    try{
     const response = await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699");
-    const res = await response.json();
-    console.log(res.title)
-    console.log(res.description)
+    const data = await response.json();
+    result=data.items;
+    console.log(result[0].volumeInfo.title)
+    console.log(result[0].volumeInfo.description)
 
-}
+} catch(error){console.log("error")}}
 request();
   
 /////////////////////////////////////////////////////////////////////////
