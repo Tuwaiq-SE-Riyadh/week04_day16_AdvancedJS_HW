@@ -21,7 +21,7 @@
         </style>
     </head>
 <body>
-    <h1 >Press the buttons below to see how setTimeout is used. Wait to see how the text below changes after a timeout of 3 seconds.</h1>
+    <h1 id="timeout_text"  >Press the buttons below to see how setTimeout is used. Wait to see how the text below changes after a timeout of 3 seconds.</h1>
 <div>
     <div id ="test"></div>
         <input type="button" id="bttn1" onclick="testTimeout()" Value= "test timeout" />
@@ -29,7 +29,7 @@
         <input type="button" id="bttn2" value="clear timeout"  onclick=" clTimeout()" />
     </div>
     <br>
-    <h3 id="timeout_text"></h3>
+    
   
 <script src="hw.js">
     // setTimeout(testTimeout, 3000)

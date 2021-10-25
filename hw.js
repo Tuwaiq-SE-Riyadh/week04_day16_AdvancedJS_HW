@@ -57,6 +57,7 @@ var timeout;
 function test()
     {
         h.style.color="green";
+       
         h.innerHTML="The timeout has been triggered!"
 
 
@@ -67,6 +68,7 @@ function test()
  
  function clTimeout(){
   clearTimeout(timeout)
+  h.style.color="black";
   h.innerHTML="The timeout has been cleared"
 }
     
