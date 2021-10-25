@@ -24,6 +24,7 @@ let timeout;
       function timeoutTest(){
           const h = document.getElementById("timeout_text");
           h.innerText="The timeout has been started";
+          h.style.color="black";
           timeout = setTimeout(function(){ const h = document.getElementById("timeout_text");
               h.innerText="The timeout has been triggered!";
               h.style.color="green";
@@ -33,5 +34,8 @@ let timeout;
       
       function timeoutStop(){
         clearTimeout(timeout);
+        const h = document.getElementById("timeout_text");
+              h.innerText="The timeout has been cleared";
+              h.style.color="black";
       }
 
