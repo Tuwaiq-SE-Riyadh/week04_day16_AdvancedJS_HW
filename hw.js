@@ -8,7 +8,7 @@ fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699")
         }),
       
       (error) => {
-       console.log(error);
+       console.log("error");
       }
 
 
@@ -29,12 +29,13 @@ const display=async()=>{
     try{
     const response=await fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699");
     const data= await response.json();
-    result=json.items;
+    //name const=data.items
+    result=data.items;
     console.log(result[0].volumeInfo.title)
     console.log(result[0].volumeInfo.description)
 
     } catch(err){
-        console.log(error)
+        console.log("error")
     }
 }
         display();
