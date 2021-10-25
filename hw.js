@@ -47,7 +47,7 @@ const display=async()=>{
  var myinput2=document.getElementById("bttn1")
 var h=document.getElementById("head")
 
-
+var timeout;
  function testTimeout(){
     
     h.innerHTML="The timeout has been started";
@@ -67,7 +67,7 @@ function test()
  
  function clTimeout(){
   clearTimeout(timeout)
-  alert("The timeout has been cleared")
+  h.innerHTML="The timeout has been cleared"
 }
     
   
