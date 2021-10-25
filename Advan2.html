@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <h1>
+      Press the buttons below to see how setTimeout is used. Wait to see how the
+      text below changes after a timeout of 3 seconds.
+    </h1>
+
+    <div>
+      <input type="button" onclick="ma();" value="test timeout" />
+      <input type="button" onclick="na();" value="clear timeout" />
+    </div>
+    <br />
+    <h3 id="timeout_text"></h3>
+
+    <script>
+    const v = setTimeout(myTimeout1, 3000);
+      function myTimeout1() {
+        const a = document.getElementById("timeout_text");
+        a.innerHTML = "The timeout has been triggered!";
+        a.style.color = "green";
+      }
+      function ma() {
+        const q = document.querySelector("#timeout_text");
+        q.innerHTML = "The timeout has been started";
+        
+      }
+      function na(){
+        clearTimeout(v);
+        const m = document.querySelector("#timeout_text");
+        m.innerHTML = "The timeout has been cleared";
+        
+      }
+    </script>
+      
+    </script>
+  </body>
+</html>
