@@ -30,15 +30,15 @@ const json = await response.json();
 console.log(json);
 }
 request();
-//Step 3
+// //Step 3
 fetch("https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699")
 
 .then(function (res){
 return res.json()})
 .then(function (result){
-    items= result.volumeInfo.items;
+    items= result.items[0].volumeInfo;
     console.log(items);
-const title=items.kind;
+const title=items.title;
 const description=items.description;
 const body=document.querySelector('body')
 const p=document.createElement("p")
@@ -53,30 +53,34 @@ function (error){
 console.log(error);
 }
 
-
+//Timing Event
     </script>
    <h1>Press the buttons below to see how setTimeout is used. Wait to see how the text below changes after a timeout of 3 seconds.</h1>
 
    <div>
        <input type="button" onclick="Start()" value="test timeout"  />
-       <input type="button" value="clear timeout"  />
+       <input type="button" value="clear timeout" onclick="ClearTimeOut()"  />
    </div>
    <br>
    <h3 id="timeout_text"></h3>
    <script>
-      const time= setTimeout=(TimeOut,3000);
+      
+        let time
        function TimeOut() {
-          const timeouttext=document.getElementById("timeout_text").innerHTML="The timeout has been triggered!";
+          const timeouttext=document.getElementById("timeout_text")
+          timeouttext.innerHTML="The timeout has been triggered!";
           timeouttext.style.color="green"; 
        }
        function Start() {
+           time = setTimeout(TimeOut,3000);
            const start=document.getElementById("timeout_text");
            start.innerHTML="The timeout has been started";
        } 
        function ClearTimeOut() {
-         ClearTimeOut(time);
+         clearTimeout(time);
          const clear=document.getElementById("timeout_text").innerHTML="The timeout has been cleared"
         }
+
    </script>
 </body>
 </html>
